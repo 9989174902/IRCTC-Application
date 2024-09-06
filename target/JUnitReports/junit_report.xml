@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="190.133" tests="5" skipped="0" failures="0" errors="0">
+<testcase classname="Irctc Home Page" name="Check labels on the IRCTC Home Page" time="13.927">
+<system-out><![CDATA[
+Given the user is on the IRCTC Home page....................................passed
+When the label for the Departure Station field should be "<departureLabel>".passed
+When label for the Arrival Station field should be "<arrivalLabel>".........passed
+When the label for the All Classes field should be "<availableclassLabel>"..passed
+When the label for the General should be "<generalLabel>"...................passed
+Then the user check all labels..............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Search Trains on IRCTC" name="Search for trains from Valid &lt;FromLocation&gt; to &lt;ToLocation&gt; on &lt;TravelDate&gt; - #1.1: Search for trains from Valid Kurnool to Bengaluru on 2024-09-15" time="24.983">
+<system-out><![CDATA[
+Given the user is on the irctc home page for Booking Ticket.................passed
+When the user enters "Kurnool" as the departure station.....................passed
+When the user enters "Bengaluru" as the arrival station.....................passed
+When the user selects "2024-09-15" as the date..............................passed
+When the user click the search button.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Search Trains on IRCTC" name="Search for trains from Invalid &lt;FromLocation&gt; to &lt;ToLocation&gt; on &lt;TravelDate&gt; - #1.1: Search for trains from Invalid Proddatur to Bengaluru on 2024-09-15" time="22.426">
+<system-out><![CDATA[
+Given the user is on the irctc home page for Booking Ticket.................passed
+When the user enters "Proddatur" as the departure station...................passed
+When the user enters "Bengaluru" as the arrival station.....................passed
+When the user selects "2024-09-15" as the date..............................passed
+When the user click the search button.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Irctc ModifySearch" name="Modify the search Results - #1.1" time="77.156">
+<system-out><![CDATA[
+Given the user is on the IRCTC home page for booking ticket.................passed
+When the user enter "Secunderabad" as the Departure Station.................passed
+When the user enter "Bengaluru" as the Arrival Station......................passed
+When the user select "2024-10-25" as the Date...............................passed
+When the user click the Search button.......................................passed
+When user click on All Classes..............................................passed
+When user click on the Modify Search........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Irctc Sort By Duration" name="Check Sort By Duration Late First - #1.1" time="47.738">
+<system-out><![CDATA[
+Given the user is on the irctc home page for booking Ticket.................passed
+When the user enter "Kurnool" as the Departure station......................passed
+When the user enter "Bengaluru" as the Arrival station......................passed
+When the user select "01/09/2024" as the date...............................passed
+When user click the Search button...........................................passed
+When the user click on Sort by Duration.....................................passed
+Then Display All the Elements in the Sort By Duration.......................passed
+When user clicks on Duration Late First.....................................passed
+]]></system-out>
+</testcase>
+</testsuite>
